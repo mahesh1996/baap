@@ -3,6 +3,8 @@ package com.team.baap.repository;
 import com.team.baap.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RoleRepository extends JpaRepository<Role, Long> {
-    Role findByRole(String role);
+import java.util.Optional;
+
+public interface RoleRepository extends JpaRepository<Role, String> {
+    Optional<Role> findByRole(String role);
 }
